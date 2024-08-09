@@ -4,5 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
     <title>{{.blog_title}}</title>
     <link rel="stylesheet" href="{{ .theme_base}}/dist/style.css?version={{ .theme.Version}}" />
+    {{if .options.blog_favicon}}
+    <link rel="shortcut icon" type="images/x-icon" href="{{.options.blog_favicon}}">
+    {{end}}
     <script type="text/javascript" src="{{ .theme_base}}/dist/main.iife.js?v={{ .theme.Version}}"></script>
 {{- end -}}
